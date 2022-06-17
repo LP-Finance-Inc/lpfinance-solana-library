@@ -1,0 +1,19 @@
+{
+  "name": "@lpfinance/solana",
+  "version": "1.0.0",
+  "description": "Created a library to use for lp finance solana functions",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "\"functions\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LP-Finance-Inc/lpfinance-solana-library.git"
+  },
+  "author": "Eric lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LP-Finance-Inc/lpfinance-solana-library/issues"
+  },
+  "homepage": "https://github.com/LP-Finance-Inc/lpfinance-solana-library#readme"
+}
