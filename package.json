@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "description": "Created a library to use for lp finance solana functions",
   "main": "./src/index.js",
+  "module": "./src/index.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "\"functions\""
   },
@@ -15,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/LP-Finance-Inc/lpfinance-solana-library/issues"
   },
-  "homepage": "https://github.com/LP-Finance-Inc/lpfinance-solana-library#readme"
+  "homepage": "https://github.com/LP-Finance-Inc/lpfinance-solana-library#readme",
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
