@@ -1,9 +1,9 @@
 {
   "name": "@lpfinance/solana",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Created a library to use for lp finance solana functions",
-  "main": "./src/index.js",
-  "module": "./src/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.es.js",
   "files": [
     "dist"
   ],
@@ -11,7 +11,7 @@
     "access": "public"
   },
   "scripts": {
-    "test": "\"functions\""
+    "build-lib": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -24,8 +24,16 @@
   },
   "homepage": "https://github.com/LP-Finance-Inc/lpfinance-solana-library#readme",
   "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-react": "^7.17.12",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "babel-loader": "^8.2.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "rollup": "^2.75.6",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2"
   },
   "peerDependencies": {
     "react": "^18.2.0",
