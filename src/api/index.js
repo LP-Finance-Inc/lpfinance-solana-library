@@ -1,11 +1,7 @@
-const endpoint = "https://backend.lpblock.org/api";
+const BaseUrl = "https://www.api.lp.finance/api";
 
 const api = {
-  getSolanaCrypto: endpoint + "/SolanaCrypto/getSolanaCrypto",
-  getLiquidateAccountList: endpoint + "/SolanaCrypto/getLiquidateAccountList",
-  deleteLiquidated: endpoint + "/SolanaCrypto/deleteLiquidated",
-  getLastEpochProfit: endpoint + "/SolanaCrypto/getLastEpochProfit",
-  getAPY: endpoint + "/SolanaCrypto/getAPY",
+  getSolanaCrypto: BaseUrl + "/solana/getSolana",
 };
 
 export default api;
