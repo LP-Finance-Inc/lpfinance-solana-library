@@ -1,6 +1,6 @@
 {
   "name": "@lpfinance/solana",
-  "version": "1.0.17",
+  "version": "1.0.19",
   "description": "Created a library to use for lp finance solana functions",
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
