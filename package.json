@@ -1,6 +1,6 @@
 {
   "name": "@lpfinance/solana",
-  "version": "1.0.13",
+  "version": "1.0.17",
   "description": "Created a library to use for lp finance solana functions",
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
@@ -29,6 +29,7 @@
     "@project-serum/anchor": "^0.22.1",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
+    "@solana/spl-token": "^0.1.8",
     "@solana/web3.js": "^1.44.1",
     "axios": "^0.27.2",
     "babel-loader": "^8.2.5",
@@ -44,6 +45,7 @@
   "peerDependencies": {
     "@project-serum/anchor": "^0.22.1",
     "@solana/web3.js": "^1.44.1",
+    "@solana/spl-token": "^0.1.8",
     "axios": "^0.27.2",
     "bs58": "^5.0.0",
     "moment-timezone": "^0.5.34",
