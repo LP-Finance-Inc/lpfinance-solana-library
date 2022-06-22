@@ -1,20 +1,20 @@
 **Note: -**
 
-# Installation
+## Installation
 
 ```
 yarn add @lpfinance/solana
 ```
 
-# **<h3>LP Finance Library</h3>**
+## **<h3>LP Finance Library</h3>**
 
-This is the LP Finance javascript library to interact with https://test.lp.finance.
+#### This is the LP Finance javascript library to interact with https://test.lp.finance.
 
 ##### ![logo](https://test.lp.finance/images/LP_Finance_Logo.png)
 
-### [Latest API documentation](https://docs.lp.finance/)
+#### [Latest API documentation](https://docs.lp.finance/)
 
-# **configurations**
+## **configurations**
 
 Create a config-overrides.js file in root folder
 
@@ -66,7 +66,7 @@ create a .env file and start project
 GENERATE_SOURCEMAP=false
 ```
 
-# **Basic usage**
+## **Basic usage**
 
 - First Create a wallet using private key to perform Transaction and get details.Private key should be in bytes.
 
