@@ -6,17 +6,17 @@
 yarn add @lpfinance/solana
 ```
 
-## **<h3>LP Finance Library</h3>**
+# LP Finance Library
 
-##### This is the LP Finance javascript library to interact with https://test.lp.finance.
+**This is the LP Finance javascript library to interact with https://test.lp.finance.**
 
 ##### ![logo](https://www.lp.finance/images/LP_Finance_Logo__1.png)
 
-##### [Latest API documentation](https://docs.lp.finance/)
+#### [Latest API documentation](https://docs.lp.finance/)
 
 ## **configurations**
 
-Create a config-overrides.js file in root folder
+**Create a config-overrides.js file in root folder**
 
 ```
 const webpack = require("webpack");
@@ -47,11 +47,13 @@ module.exports = function override(config) {
 };
 ```
 
-after install and add script in package.json file
+**after install and add script in package.json file**
 
 ```
 yarn add -D react-app-rewired
+```
 
+```
  "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
@@ -60,7 +62,7 @@ yarn add -D react-app-rewired
   },
 ```
 
-create a .env file and start project
+**create a .env file and start project**
 
 ```
 GENERATE_SOURCEMAP=false
@@ -68,7 +70,7 @@ GENERATE_SOURCEMAP=false
 
 ## **Basic usage**
 
-- First Create a wallet using private key to perform Transaction and get details.Private key should be in bytes.
+- **First Create a wallet using private key to perform Transaction and get details.Private key should be in bytes.**
 
 ```
 import { useWallet } from "@lpfinance/solana";
@@ -79,7 +81,7 @@ const App = () => {
 
 ```
 
-- Use `useCBSProtocolOverview` hook to get cbs system details
+- **Use `useCBSProtocolOverview` hook to get cbs system details.**
 
 ```
 import { useWallet, useCBSProtocolOverview } from "@lpfinance/solana";
@@ -92,7 +94,7 @@ const App = () => {
 }
 ```
 
-- Use `useAuctionProtocolOverview` hook to get cbs system details
+- **Use `useAuctionProtocolOverview` hook to get cbs system details.**
 
 ```
 import { useWallet, useAuctionProtocolOverview } from "@lpfinance/solana";
@@ -105,7 +107,7 @@ const App = () => {
 }
 ```
 
-- get LiquidateList using `getLiquidateList` hook to get cbs system details
+- **get LiquidateList using `getLiquidateList` hook to get cbs system details.**
 
 ```
 import React, { useState, useEffect } from "react";
