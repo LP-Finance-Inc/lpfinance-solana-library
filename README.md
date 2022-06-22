@@ -8,11 +8,11 @@ yarn add @lpfinance/solana
 
 ## **<h3>LP Finance Library</h3>**
 
-#### This is the LP Finance javascript library to interact with https://test.lp.finance.
+##### This is the LP Finance javascript library to interact with https://test.lp.finance.
 
-##### ![logo](https://test.lp.finance/images/LP_Finance_Logo.png)
+##### ![logo](https://www.lp.finance/images/LP_Finance_Logo__1.png)
 
-#### [Latest API documentation](https://docs.lp.finance/)
+##### [Latest API documentation](https://docs.lp.finance/)
 
 ## **configurations**
 
