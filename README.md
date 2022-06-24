@@ -12,7 +12,7 @@ yarn add @lpfinance/solana
 
 ##### ![logo](https://www.lp.finance/images/LP_Finance_Logo__1.png)
 
-#### [Latest API documentation](https://docs.lp.finance/)
+#### [Latest API documentation](https://lp-finance-inc.github.io/lpfinance-docs/)
 
 ## **configurations**
 
@@ -35,6 +35,7 @@ module.exports = function override(config) {
     path: false,
     buffer: false,
     process: false,
+    util: false
   });
   config.resolve.fallback = fallback;
   config.plugins = (config.plugins || []).concat([
@@ -128,5 +129,173 @@ const App = () => {
     callLiquidate();
   }, []);
 
+}
+```
+
+- **get CBS user account details using `useCBSUserAccount` hook.**
+
+```
+import { useWallet, useCBSUserAccount } from "@lpfinance/solana";
+
+const App = () => {
+    const { wallet } = useWallet(process.env.PRIVATE_KEY);
+
+    const AccountDetails = useCBSUserAccount(wallet);
+}
+```
+
+- **get Auction user account details using `useAuctionUserAccount` hook.**
+
+```
+import { useWallet, useAuctionUserAccount } from "@lpfinance/solana";
+
+const App = () => {
+    const { wallet } = useWallet(process.env.PRIVATE_KEY);
+
+    const AccountDetails = useAuctionUserAccount(wallet);
+}
+```
+
+### - **Use CBS Transaction Functions -**
+
+**a) Deposit - Use depositCBS function and TokenName should be "SOL", "lpUSD", "lpSOL", "lpBTC", "lpETH", "USDC", "BTC", "mSOL", "ETH", "UST", "SRM", "scnSOL", "stSOL", "USDT".**
+
+```
+import { useWallet, depositCBS } from "@lpfinance/solana";
+
+const App = () => {
+    const { wallet } = useWallet(process.env.PRIVATE_KEY);
+
+   const SendTransaction = async() => {
+    const { message } =  await  depositCBS(wallet, amount, TokenName);
+   }
+
+    return (
+      <>
+        <button onClick={SendTransaction}>depositCBS</button>
+      </>
+    )
+}
+```
+
+**b) Borrow - Use borrowCBS function and TokenName should be "lpUSD", "lpSOL", "lpBTC", "lpETH".**
+
+```
+import { useWallet, borrowCBS } from "@lpfinance/solana";
+
+const App = () => {
+    const { wallet } = useWallet(process.env.PRIVATE_KEY);
+
+   const SendTransaction = async() => {
+    const { message } =  await  borrowCBS(wallet, amount, TokenName);
+   }
+
+    return (
+      <>
+        <button onClick={SendTransaction}>borrowCBS</button>
+      </>
+    )
+}
+```
+
+**c) Withdraw - Use withdrawCBS function and TokenName should be "SOL", "lpUSD", "lpSOL", "lpBTC", "lpETH", "USDC", "BTC", "mSOL", "ETH", "UST", "SRM", "scnSOL", "stSOL", "USDT".**
+
+```
+import { useWallet, withdrawCBS } from "@lpfinance/solana";
+
+const App = () => {
+    const { wallet } = useWallet(process.env.PRIVATE_KEY);
+
+   const SendTransaction = async() => {
+    const { message } =  await  withdrawCBS(wallet, amount, TokenName);
+   }
+
+    return (
+      <>
+        <button onClick={SendTransaction}>withdrawCBS</button>
+      </>
+    )
+}
+```
+
+**d) Repayment - Use repayCBS function and TokenName should be "SOL", "lpUSD", "lpSOL", "lpBTC", "lpETH", "USDC", "BTC", "ETH".**
+
+```
+import { useWallet, repayCBS } from "@lpfinance/solana";
+
+const App = () => {
+    const { wallet } = useWallet(process.env.PRIVATE_KEY);
+
+   const SendTransaction = async() => {
+    const { message } =  await  repayCBS(wallet, amount, TokenName);
+   }
+
+    return (
+      <>
+        <button onClick={SendTransaction}>repayCBS</button>
+      </>
+    )
+}
+```
+
+### - **Use Auction Transaction Functions -**
+
+**a) Deposit - Use depositAuction function and "lpUSD" is default token to perform deposit.**
+
+```
+import { useWallet, depositAuction } from "@lpfinance/solana";
+
+const App = () => {
+    const { wallet } = useWallet(process.env.PRIVATE_KEY);
+
+   const SendTransaction = async() => {
+    const { message } =  await  depositAuction(wallet, amount);
+   }
+
+    return (
+      <>
+        <button onClick={SendTransaction}>depositAuction</button>
+      </>
+    )
+}
+```
+
+**a) Withdraw - Use withdrawAuction function and "lpUSD" is default token to perform withdraw.**
+
+```
+import { useWallet, withdrawAuction } from "@lpfinance/solana";
+
+const App = () => {
+    const { wallet } = useWallet(process.env.PRIVATE_KEY);
+
+   const SendTransaction = async() => {
+    const { message } =  await  withdrawAuction(wallet, amount);
+   }
+
+    return (
+      <>
+        <button onClick={SendTransaction}>withdrawAuction</button>
+      </>
+    )
+}
+```
+
+- **Liquidate - Use liquidateAccount function**
+
+```
+import { useWallet, liquidateAccount } from "@lpfinance/solana";
+
+const App = () => {
+    const { wallet } = useWallet(process.env.PRIVATE_KEY);
+
+   const liquidateAccountFun = async() => {
+    const { message } =  await liquidateAccount( wallet, userKey, Debt, Collateral,
+    LTV, LiquidatorFunds, LastEpochProfit);
+
+    return (
+      <>
+        <button onClick={liquidateAccountFun}>liquidateAccount</button>
+      </>
+    )
 }
 ```
