@@ -1,6 +1,6 @@
 {
-  "name": "@lpfinance/solana",
-  "version": "2.1.4",
+  "name": "@lpfinance/solana-sdk",
+  "version": "0.2.0",
   "description": "Created a library to use for lp finance solana functions",
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
@@ -25,14 +25,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LP-Finance-Inc/lpfinance-solana-library.git"
+    "url": "git+https://github.com/LP-Finance-Inc/lpfinance-solana-sdk.git"
   },
   "author": "Eric lee",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LP-Finance-Inc/lpfinance-solana-library/issues"
+    "url": "https://github.com/LP-Finance-Inc/lpfinance-solana-sdk/issues"
   },
-  "homepage": "https://github.com/LP-Finance-Inc/lpfinance-solana-library#readme",
+  "homepage": "https://github.com/LP-Finance-Inc/lpfinance-solana-sdk#readme",
   "devDependencies": {
     "@babel/core": "^7.18.5",
     "@babel/preset-react": "^7.17.12",
@@ -54,5 +54,8 @@
   },
   "browser": {
     "crypto": false
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
