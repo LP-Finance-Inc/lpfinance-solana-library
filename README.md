@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-yarn add @lpfinance/solana-sdk
+yarn add @lpfinance/lpfinance-solana-sdk
 ```
 
 # LP Finance Library
