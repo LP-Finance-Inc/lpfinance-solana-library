@@ -1,7 +1,7 @@
 {
-  "name": "@lpfinance/solana-sdk",
+  "name": "@lpfinance/lpfinance-solana-sdk",
   "version": "0.3.0",
-  "description": "Created a library to use for lp finance solana functions",
+  "description": "Interact with Solana LP Finance Application",
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
   "files": [
