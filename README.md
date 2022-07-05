@@ -71,7 +71,7 @@ GENERATE_SOURCEMAP=false
 
 ## **Basic usage**
 
-- **First Create a wallet using private key to perform Transaction and get details.Private key should be in bytes.**
+- **First Create a wallet using private key to perform Transaction and get details.**
 
 ```
 import { useWallet } from "@lpfinance/lpfinance-solana-sdk";
