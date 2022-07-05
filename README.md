@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-yarn add @lpfinance/solana-sdk
+yarn add @lpfinance/lpfinance-solana-sdk
 ```
 
 # LP Finance Library
@@ -12,7 +12,7 @@ yarn add @lpfinance/solana-sdk
 
 ##### ![logo](https://www.lp.finance/images/LP_Finance_Logo__1.png)
 
-#### [Latest API documentation](https://lp-finance-inc.github.io/lpfinance-docs/)
+#### [Latest API documentation](https://lp-finance-inc.github.io/lpfinance-solana-sdk-docs/)
 
 ## **configurations**
 
@@ -74,10 +74,10 @@ GENERATE_SOURCEMAP=false
 - **First Create a wallet using private key to perform Transaction and get details.Private key should be in bytes.**
 
 ```
-import { useWallet } from "@lpfinance/solana-sdk";
+import { useWallet } from "@lpfinance/lpfinance-solana-sdk";
 
 const App = () => {
-    const { wallet } = useWallet(process.env.PRIVATE_KEY);
+    const { wallet, publicKey } = useWallet(process.env.PRIVATE_KEY);
 }
 
 ```
@@ -85,7 +85,7 @@ const App = () => {
 - **Use `useCBSProtocolOverview` hook to get cbs system details.**
 
 ```
-import { useWallet, useCBSProtocolOverview } from "@lpfinance/solana-sdk";
+import { useWallet, useCBSProtocolOverview } from "@lpfinance/lpfinance-solana-sdk";
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -98,7 +98,7 @@ const App = () => {
 - **Use `useAuctionProtocolOverview` hook to get cbs system details.**
 
 ```
-import { useWallet, useAuctionProtocolOverview } from "@lpfinance/solana-sdk";
+import { useWallet, useAuctionProtocolOverview } from "@lpfinance/lpfinance-solana-sdk";
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -112,7 +112,7 @@ const App = () => {
 
 ```
 import React, { useState, useEffect } from "react";
-import { getLiquidateList } from "@lpfinance/solana-sdk";
+import { getLiquidateList } from "@lpfinance/lpfinance-solana-sdk";
 
 const App = () => {
 
@@ -135,7 +135,7 @@ const App = () => {
 - **get CBS user account details using `useCBSUserAccount` hook.**
 
 ```
-import { useWallet, useCBSUserAccount } from "@lpfinance/solana-sdk";
+import { useWallet, useCBSUserAccount } from "@lpfinance/lpfinance-solana-sdk";
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -147,7 +147,7 @@ const App = () => {
 - **get Auction user account details using `useAuctionUserAccount` hook.**
 
 ```
-import { useWallet, useAuctionUserAccount } from "@lpfinance/solana-sdk";
+import { useWallet, useAuctionUserAccount } from "@lpfinance/lpfinance-solana-sdk";
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -161,7 +161,7 @@ const App = () => {
 **a) Deposit - Use depositCBS function and TokenName should be "SOL", "lpUSD", "lpSOL", "lpBTC", "lpETH", "USDC", "BTC", "mSOL", "ETH", "UST", "SRM", "scnSOL", "stSOL", "USDT".**
 
 ```
-import { useWallet, depositCBS } from "@lpfinance/solana-sdk";
+import { useWallet, depositCBS } from "@lpfinance/lpfinance-solana-sdk";
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -181,7 +181,7 @@ const App = () => {
 **b) Borrow - Use borrowCBS function and TokenName should be "lpUSD", "lpSOL", "lpBTC", "lpETH".**
 
 ```
-import { useWallet, borrowCBS } from "@lpfinance/solana-sdk";
+import { useWallet, borrowCBS } from "@lpfinance/lpfinance-solana-sdk";
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -201,7 +201,7 @@ const App = () => {
 **c) Withdraw - Use withdrawCBS function and TokenName should be "SOL", "lpUSD", "lpSOL", "lpBTC", "lpETH", "USDC", "BTC", "mSOL", "ETH", "UST", "SRM", "scnSOL", "stSOL", "USDT".**
 
 ```
-import { useWallet, withdrawCBS } from "@lpfinance/solana-sdk";
+import { useWallet, withdrawCBS } from "@lpfinance/lpfinance-solana-sdk";
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -221,7 +221,7 @@ const App = () => {
 **d) Repayment - Use repayCBS function and TokenName should be "SOL", "lpUSD", "lpSOL", "lpBTC", "lpETH", "USDC", "BTC", "ETH".**
 
 ```
-import { useWallet, repayCBS } from "@lpfinance/solana-sdk";
+import { useWallet, repayCBS } from "@lpfinance/lpfinance-solana-sdk";
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -243,7 +243,7 @@ const App = () => {
 **a) Deposit - Use depositAuction function and "lpUSD" is default token to perform deposit.**
 
 ```
-import { useWallet, depositAuction } from "@lpfinance/solana-sdk";
+import { useWallet, depositAuction } from "@lpfinance/lpfinance-solana-sdk";
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -263,7 +263,7 @@ const App = () => {
 **a) Withdraw - Use withdrawAuction function and "lpUSD" is default token to perform withdraw.**
 
 ```
-import { useWallet, withdrawAuction } from "@lpfinance/solana-sdk";
+import { useWallet, withdrawAuction } from "@lpfinance/lpfinance-solana-sdk";
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
@@ -283,7 +283,7 @@ const App = () => {
 - **Liquidate - Use liquidateAccount function**
 
 ```
-import { useWallet, liquidateAccount } from "@lpfinance/solana-sdk";
+import { useWallet, liquidateAccount } from "@lpfinance/lpfinance-solana-sdk";
 
 const App = () => {
     const { wallet } = useWallet(process.env.PRIVATE_KEY);
